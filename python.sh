@@ -25,6 +25,9 @@ rsync -av --exclude '**/.git' $SOURCEDIR/ $BUILDDIR/
 # According to cmsdist, this is required to pick up our own version
 export LIBFFI_ROOT
 
+export PATH=$(echo $PATH | tr ':' '\n' | grep -v 'python' | tr '\n' ':' | sed 's/:$//')
+unset PYTHONUSERBASE
+
 # The only way to pass externals to Python
 LDFLAGS=
 CPPFLAGS=
