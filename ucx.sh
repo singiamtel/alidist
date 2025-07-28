@@ -14,6 +14,8 @@ source: https://github.com/alisw/ucx
 
 # Unified Communication X Library (linux only)
 
+echo blabla
+
 rsync -a --delete --exclude "**/.git" "${SOURCEDIR}"/ .
 ./autogen.sh
 ./contrib/configure-release-mt --prefix="${INSTALLROOT}"     \
