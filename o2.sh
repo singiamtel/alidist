@@ -207,6 +207,8 @@ if [[ ! $CMAKE_GENERATOR && $DISABLE_NINJA != 1 && $DEVEL_SOURCES != $SOURCEDIR 
   unset NINJA_BIN
 fi
 
+echo blabla
+
 
 unset DYLD_LIBRARY_PATH
 cmake $SOURCEDIR -DCMAKE_INSTALL_PREFIX=$INSTALLROOT                                                      \
