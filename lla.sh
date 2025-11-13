@@ -6,7 +6,7 @@ requires:
   - Common-O2
   - "GCC-Toolchain:(?!osx)"
   - ReadoutCard
-  - "Python:slc.*"
+  - "Python-standalone:slc.*"
 build_requires:
   - alibuild-recipe-tools
   - CMake
@@ -29,7 +29,7 @@ cmake $SOURCEDIR                                                       \
       ${BOOST_REVISION:+-DBOOST_ROOT=$BOOST_ROOT}                         \
       ${COMMON_O2_REVISION:+-DCommon_ROOT=$COMMON_O2_ROOT}             \
       ${READOUTCARD_REVISION:+-DReadoutCard_ROOT=$READOUTCARD_ROOT}    \
-      ${PYTHON_ROOT:+-DPython3_EXECUTABLE="$(which python3)"}      \
+      ${PYTHON_STANDALONE_ROOT:+-DPython3_EXECUTABLE="$(which python3)"}      \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 cp ${BUILDDIR}/compile_commands.json ${INSTALLROOT}

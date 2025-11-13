@@ -1,7 +1,7 @@
 package: Python-modules
 version: "1.0"
 requires:
-  - "Python"
+  - "Python-standalone"
   - "FreeType:(?!osx)"
   - libpng
   - hdf5

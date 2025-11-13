@@ -19,7 +19,7 @@ build_requires:
   - CMake
   - alibuild-recipe-tools
   - nlohmann_json
-  - "Python"  # this package builds ONNX, which requires Python
+  - "Python-standalone"  # this package builds ONNX, which requires Python
 prepend_path:
   ROOT_INCLUDE_PATH: "$ONNXRUNTIME_ROOT/include/onnxruntime"
 ---

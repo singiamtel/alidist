@@ -9,7 +9,7 @@ requires:
 build_requires:
   - CMake
   - alibuild-recipe-tools
-  - Python
+  - Python-standalone
   - ninja
 ---
 #!/bin/bash -e

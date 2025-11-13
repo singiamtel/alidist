@@ -3,14 +3,14 @@ version: "%(tag_basename)s"
 tag: "yoda-2.1.0"
 source: https://gitlab.com/hepcedar/yoda.git
 requires:
-  - Python
+  - Python-standalone
   - Python-modules
   - ROOT
   - hdf5
 build_requires:
   - "autotools:(slc6|slc7)"
   - HepMC3
-  - Python
+  - Python-standalone
 prepend_path:
   PYTHONPATH: $YODA_ROOT/lib/python/site-packages
 ---

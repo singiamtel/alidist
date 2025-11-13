@@ -8,11 +8,11 @@ requires:
   - fastjet
   - cgal
   - GMP
-  - Python
+  - Python-standalone
   - Python-modules
 build_requires:
   - GCC-Toolchain:(?!osx)
-  - Python
+  - Python-standalone
   - make
 prepend_path:
   PYTHONPATH: "$RIVET_ROOT/lib/python/site-packages"

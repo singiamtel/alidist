@@ -5,7 +5,7 @@ source: https://github.com/alisw/llvm-project-reduced
 requires:
   - "GCC-Toolchain:(?!osx)"
 build_requires:
-  - "Python"
+  - "Python-standalone"
   - CMake
   - curl
   - ninja

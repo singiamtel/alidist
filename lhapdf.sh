@@ -3,7 +3,7 @@ version: "%(tag_basename)s"
 tag: v6.5.2
 source: https://github.com/alisw/LHAPDF
 requires:
-  - "Python"
+  - "Python-standalone"
   - "GCC-Toolchain:(?!osx)"
 build_requires:
   - "autotools:(slc6|slc7)"
