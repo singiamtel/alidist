@@ -14,7 +14,7 @@ build_requires:
 source: https://github.com/grpc/grpc
 incremental_recipe: |
   cmake --build . -- ${JOBS:+-j$JOBS} install
-  mkdir -p $INSTALLROOT/etc/modulefiles && rsync -a --delete etc/modulefiles/ $INSTALLROOT/etc/modulefiles
+  mkdir -p "$INSTALLROOT"/etc/modulefiles && rsync -a --delete etc/modulefiles/ "$INSTALLROOT"/etc/modulefiles
 # prefer_system: .*
 # prefer_system_check: |
 #   printf "#include \"grpcpp/version_info.h\"\n" | cc -I$(brew --prefix grpc)/include -xc++ -std=c++20 - -c -o /dev/null
@@ -85,6 +85,5 @@ esac
 
 
 #ModuleFile
-mkdir -p etc/modulefiles
-alibuild-generate-module --bin --lib > etc/modulefiles/$PKGNAME
-mkdir -p $INSTALLROOT/etc/modulefiles && rsync -a --delete etc/modulefiles/ $INSTALLROOT/etc/modulefiles
+mkdir -p "$INSTALLROOT/etc/modulefiles"
+alibuild-generate-module --bin --lib >"$INSTALLROOT/etc/modulefiles/$PKGNAME"
